@@ -13,6 +13,8 @@
 		D7E956B51AE5F4D900E08F65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B41AE5F4D900E08F65 /* Images.xcassets */; };
 		D7E956B81AE5F4D900E08F65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */; };
 		D7E956C41AE5F4D900E08F65 /* tarotvnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */; };
+		D7E956CE1AE5F58100E08F65 /* ListcardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956CD1AE5F58100E08F65 /* ListcardTableViewController.swift */; };
+		D7E956D01AE5F71300E08F65 /* ListCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956CF1AE5F71300E08F65 /* ListCardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D7E956BD1AE5F4D900E08F65 /* tarotvnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tarotvnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E956C21AE5F4D900E08F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotvnTests.swift; sourceTree = "<group>"; };
+		D7E956CD1AE5F58100E08F65 /* ListcardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListcardTableViewController.swift; sourceTree = "<group>"; };
+		D7E956CF1AE5F71300E08F65 /* ListCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				D7E956B41AE5F4D900E08F65 /* Images.xcassets */,
 				D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */,
 				D7E956AB1AE5F4D900E08F65 /* Supporting Files */,
+				D7E956CD1AE5F58100E08F65 /* ListcardTableViewController.swift */,
+				D7E956CF1AE5F71300E08F65 /* ListCardTableViewCell.swift */,
 			);
 			path = tarotvn;
 			sourceTree = "<group>";
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E956CE1AE5F58100E08F65 /* ListcardTableViewController.swift in Sources */,
 				D7E956B01AE5F4D900E08F65 /* ViewController.swift in Sources */,
 				D7E956AE1AE5F4D900E08F65 /* AppDelegate.swift in Sources */,
+				D7E956D01AE5F71300E08F65 /* ListCardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
