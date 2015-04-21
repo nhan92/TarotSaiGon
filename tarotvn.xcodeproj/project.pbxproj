@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7E956AE1AE5F4D900E08F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */; };
+		D7E956B01AE5F4D900E08F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956AF1AE5F4D900E08F65 /* ViewController.swift */; };
+		D7E956B31AE5F4D900E08F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B11AE5F4D900E08F65 /* Main.storyboard */; };
+		D7E956B51AE5F4D900E08F65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B41AE5F4D900E08F65 /* Images.xcassets */; };
+		D7E956B81AE5F4D900E08F65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */; };
+		D7E956C41AE5F4D900E08F65 /* tarotvnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7E956BE1AE5F4D900E08F65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7E956A01AE5F4D900E08F65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7E956A71AE5F4D900E08F65;
+			remoteInfo = tarotvn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7E956A81AE5F4D900E08F65 /* tarotvn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotvn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7E956AC1AE5F4D900E08F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7E956AF1AE5F4D900E08F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7E956B21AE5F4D900E08F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7E956B41AE5F4D900E08F65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D7E956B71AE5F4D900E08F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D7E956BD1AE5F4D900E08F65 /* tarotvnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tarotvnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7E956C21AE5F4D900E08F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotvnTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7E956A51AE5F4D900E08F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E956BA1AE5F4D900E08F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7E9569F1AE5F4D900E08F65 = {
+			isa = PBXGroup;
+			children = (
+				D7E956AA1AE5F4D900E08F65 /* tarotvn */,
+				D7E956C01AE5F4D900E08F65 /* tarotvnTests */,
+				D7E956A91AE5F4D900E08F65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7E956A91AE5F4D900E08F65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956A81AE5F4D900E08F65 /* tarotvn.app */,
+				D7E956BD1AE5F4D900E08F65 /* tarotvnTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7E956AA1AE5F4D900E08F65 /* tarotvn */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */,
+				D7E956AF1AE5F4D900E08F65 /* ViewController.swift */,
+				D7E956B11AE5F4D900E08F65 /* Main.storyboard */,
+				D7E956B41AE5F4D900E08F65 /* Images.xcassets */,
+				D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */,
+				D7E956AB1AE5F4D900E08F65 /* Supporting Files */,
+			);
+			path = tarotvn;
+			sourceTree = "<group>";
+		};
+		D7E956AB1AE5F4D900E08F65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956AC1AE5F4D900E08F65 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7E956C01AE5F4D900E08F65 /* tarotvnTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */,
+				D7E956C11AE5F4D900E08F65 /* Supporting Files */,
+			);
+			path = tarotvnTests;
+			sourceTree = "<group>";
+		};
+		D7E956C11AE5F4D900E08F65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956C21AE5F4D900E08F65 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7E956A71AE5F4D900E08F65 /* tarotvn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7E956C71AE5F4D900E08F65 /* Build configuration list for PBXNativeTarget "tarotvn" */;
+			buildPhases = (
+				D7E956A41AE5F4D900E08F65 /* Sources */,
+				D7E956A51AE5F4D900E08F65 /* Frameworks */,
+				D7E956A61AE5F4D900E08F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tarotvn;
+			productName = tarotvn;
+			productReference = D7E956A81AE5F4D900E08F65 /* tarotvn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7E956BC1AE5F4D900E08F65 /* tarotvnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7E956CA1AE5F4D900E08F65 /* Build configuration list for PBXNativeTarget "tarotvnTests" */;
+			buildPhases = (
+				D7E956B91AE5F4D900E08F65 /* Sources */,
+				D7E956BA1AE5F4D900E08F65 /* Frameworks */,
+				D7E956BB1AE5F4D900E08F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7E956BF1AE5F4D900E08F65 /* PBXTargetDependency */,
+			);
+			name = tarotvnTests;
+			productName = tarotvnTests;
+			productReference = D7E956BD1AE5F4D900E08F65 /* tarotvnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7E956A01AE5F4D900E08F65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Nhan Nguyen";
+				TargetAttributes = {
+					D7E956A71AE5F4D900E08F65 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					D7E956BC1AE5F4D900E08F65 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = D7E956A71AE5F4D900E08F65;
+					};
+				};
+			};
+			buildConfigurationList = D7E956A31AE5F4D900E08F65 /* Build configuration list for PBXProject "tarotvn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7E9569F1AE5F4D900E08F65;
+			productRefGroup = D7E956A91AE5F4D900E08F65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7E956A71AE5F4D900E08F65 /* tarotvn */,
+				D7E956BC1AE5F4D900E08F65 /* tarotvnTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7E956A61AE5F4D900E08F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E956B31AE5F4D900E08F65 /* Main.storyboard in Resources */,
+				D7E956B81AE5F4D900E08F65 /* LaunchScreen.xib in Resources */,
+				D7E956B51AE5F4D900E08F65 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E956BB1AE5F4D900E08F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7E956A41AE5F4D900E08F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E956B01AE5F4D900E08F65 /* ViewController.swift in Sources */,
+				D7E956AE1AE5F4D900E08F65 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E956B91AE5F4D900E08F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E956C41AE5F4D900E08F65 /* tarotvnTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7E956BF1AE5F4D900E08F65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7E956A71AE5F4D900E08F65 /* tarotvn */;
+			targetProxy = D7E956BE1AE5F4D900E08F65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7E956B11AE5F4D900E08F65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7E956B21AE5F4D900E08F65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7E956B71AE5F4D900E08F65 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7E956C51AE5F4D900E08F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7E956C61AE5F4D900E08F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7E956C81AE5F4D900E08F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tarotvn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D7E956C91AE5F4D900E08F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tarotvn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D7E956CB1AE5F4D900E08F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tarotvnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tarotvn.app/tarotvn";
+			};
+			name = Debug;
+		};
+		D7E956CC1AE5F4D900E08F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tarotvnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tarotvn.app/tarotvn";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7E956A31AE5F4D900E08F65 /* Build configuration list for PBXProject "tarotvn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E956C51AE5F4D900E08F65 /* Debug */,
+				D7E956C61AE5F4D900E08F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7E956C71AE5F4D900E08F65 /* Build configuration list for PBXNativeTarget "tarotvn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E956C81AE5F4D900E08F65 /* Debug */,
+				D7E956C91AE5F4D900E08F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D7E956CA1AE5F4D900E08F65 /* Build configuration list for PBXNativeTarget "tarotvnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E956CB1AE5F4D900E08F65 /* Debug */,
+				D7E956CC1AE5F4D900E08F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7E956A01AE5F4D900E08F65 /* Project object */;
+}
