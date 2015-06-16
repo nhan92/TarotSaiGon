@@ -7,14 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D717D9DD1B0C8FD5000CF210 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717D9DC1B0C8FD5000CF210 /* DetailCardViewController.swift */; };
+		D73D469A1AE6507100F5D909 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D46991AE6507100F5D909 /* DatabaseManager.swift */; };
+		D73D469C1AE6508D00F5D909 /* TarotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D469B1AE6508D00F5D909 /* TarotCard.swift */; };
+		D7BC6B381B25A21100296444 /* DownloadedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */; };
+		D7D165A71B15CA2700653E4C /* ReadDataDocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D165A61B15CA2700653E4C /* ReadDataDocs.swift */; };
+		D7D8463E1B2C0BF8007BC19F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8463D1B2C0BF8007BC19F /* MBProgressHUD.m */; };
+		D7D846411B2C168C007BC19F /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D846401B2C168C007BC19F /* HamburgerButton.swift */; };
+		D7D846451B2C33DC007BC19F /* JTHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D846441B2C33DC007BC19F /* JTHamburgerButton.m */; };
+		D7E0944A1B0DD0D200456DCF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094441B0DD0D200456DCF /* Bolts.framework */; };
+		D7E0944B1B0DD0D200456DCF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094451B0DD0D200456DCF /* Parse.framework */; };
+		D7E0944C1B0DD0D200456DCF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094461B0DD0D200456DCF /* ParseCrashReporting.framework */; };
+		D7E0944D1B0DD0D200456DCF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094471B0DD0D200456DCF /* ParseFacebookUtils.framework */; };
+		D7E0944E1B0DD0D200456DCF /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094481B0DD0D200456DCF /* ParseFacebookUtilsV4.framework */; };
+		D7E0944F1B0DD0D200456DCF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094491B0DD0D200456DCF /* ParseUI.framework */; };
+		D7E094511B0DD17C00456DCF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094501B0DD17C00456DCF /* AudioToolbox.framework */; };
+		D7E094531B0DD18700456DCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094521B0DD18700456DCF /* CFNetwork.framework */; };
+		D7E094551B0DD19200456DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094541B0DD19200456DCF /* CoreGraphics.framework */; };
+		D7E094571B0DD19F00456DCF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094561B0DD19F00456DCF /* CoreLocation.framework */; };
+		D7E094591B0DD1AF00456DCF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094581B0DD1AF00456DCF /* MobileCoreServices.framework */; };
+		D7E0945B1B0DD1BC00456DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0945A1B0DD1BC00456DCF /* QuartzCore.framework */; };
+		D7E0945D1B0DD1D400456DCF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0945C1B0DD1D400456DCF /* Security.framework */; };
+		D7E0945F1B0DD1DE00456DCF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0945E1B0DD1DE00456DCF /* StoreKit.framework */; };
+		D7E094611B0DD1F000456DCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094601B0DD1F000456DCF /* SystemConfiguration.framework */; };
+		D7E094631B0DD20F00456DCF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E094621B0DD20F00456DCF /* libz.dylib */; };
+		D7E094651B0DD54C00456DCF /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E094641B0DD54C00456DCF /* BookListTableViewController.swift */; };
 		D7E956AE1AE5F4D900E08F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */; };
-		D7E956B01AE5F4D900E08F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956AF1AE5F4D900E08F65 /* ViewController.swift */; };
+		D7E956B01AE5F4D900E08F65 /* listCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956AF1AE5F4D900E08F65 /* listCardViewController.swift */; };
 		D7E956B31AE5F4D900E08F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B11AE5F4D900E08F65 /* Main.storyboard */; };
 		D7E956B51AE5F4D900E08F65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B41AE5F4D900E08F65 /* Images.xcassets */; };
 		D7E956B81AE5F4D900E08F65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */; };
 		D7E956C41AE5F4D900E08F65 /* tarotvnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */; };
-		D7E956CE1AE5F58100E08F65 /* ListcardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956CD1AE5F58100E08F65 /* ListcardTableViewController.swift */; };
-		D7E956D01AE5F71300E08F65 /* ListCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E956CF1AE5F71300E08F65 /* ListCardTableViewCell.swift */; };
+		D7E956D51AE5FD1A00E08F65 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E956D41AE5FD1A00E08F65 /* libsqlite3.dylib */; };
+		D7E956E91AE6083400E08F65 /* TLYDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E956E41AE6083400E08F65 /* TLYDelegateProxy.m */; };
+		D7E956EA1AE6083400E08F65 /* TLYShyNavBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E956E61AE6083400E08F65 /* TLYShyNavBarManager.m */; };
+		D7E956EB1AE6083400E08F65 /* TLYShyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E956E81AE6083400E08F65 /* TLYShyViewController.m */; };
+		D7E956F01AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E956ED1AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.m */; };
+		D7E956F11AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E956EF1AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +57,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D717D9DB1B0C8D53000CF210 /* tarotviet.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tarotviet.sqlite3; sourceTree = "<group>"; };
+		D717D9DC1B0C8FD5000CF210 /* DetailCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
+		D73D46991AE6507100F5D909 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		D73D469B1AE6508D00F5D909 /* TarotCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarotCard.swift; sourceTree = "<group>"; };
+		D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadedTableViewController.swift; path = ../DownloadedTableViewController.swift; sourceTree = "<group>"; };
+		D7D165A61B15CA2700653E4C /* ReadDataDocs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadDataDocs.swift; sourceTree = "<group>"; };
+		D7D8463C1B2C0BF8007BC19F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D7D8463D1B2C0BF8007BC19F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D7D846401B2C168C007BC19F /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		D7D846431B2C33DC007BC19F /* JTHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTHamburgerButton.h; sourceTree = "<group>"; };
+		D7D846441B2C33DC007BC19F /* JTHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTHamburgerButton.m; sourceTree = "<group>"; };
+		D7E094441B0DD0D200456DCF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D7E094451B0DD0D200456DCF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D7E094461B0DD0D200456DCF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		D7E094471B0DD0D200456DCF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		D7E094481B0DD0D200456DCF /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		D7E094491B0DD0D200456DCF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		D7E094501B0DD17C00456DCF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D7E094521B0DD18700456DCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D7E094541B0DD19200456DCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D7E094561B0DD19F00456DCF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D7E094581B0DD1AF00456DCF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D7E0945A1B0DD1BC00456DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D7E0945C1B0DD1D400456DCF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D7E0945E1B0DD1DE00456DCF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D7E094601B0DD1F000456DCF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D7E094621B0DD20F00456DCF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D7E094641B0DD54C00456DCF /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		D7E956A81AE5F4D900E08F65 /* tarotvn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotvn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E956AC1AE5F4D900E08F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7E956AF1AE5F4D900E08F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7E956AF1AE5F4D900E08F65 /* listCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listCardViewController.swift; sourceTree = "<group>"; };
 		D7E956B21AE5F4D900E08F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7E956B41AE5F4D900E08F65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D7E956B71AE5F4D900E08F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D7E956BD1AE5F4D900E08F65 /* tarotvnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tarotvnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E956C21AE5F4D900E08F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7E956C31AE5F4D900E08F65 /* tarotvnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotvnTests.swift; sourceTree = "<group>"; };
-		D7E956CD1AE5F58100E08F65 /* ListcardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListcardTableViewController.swift; sourceTree = "<group>"; };
-		D7E956CF1AE5F71300E08F65 /* ListCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCardTableViewCell.swift; sourceTree = "<group>"; };
+		D7E956D41AE5FD1A00E08F65 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D7E956D61AE5FD8000E08F65 /* tarotvn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "tarotvn-Bridging-Header.h"; path = "tarotvn/tarotvn-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7E956E31AE6083400E08F65 /* TLYDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLYDelegateProxy.h; path = TLYShyNavBar/TLYDelegateProxy.h; sourceTree = "<group>"; };
+		D7E956E41AE6083400E08F65 /* TLYDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLYDelegateProxy.m; path = TLYShyNavBar/TLYDelegateProxy.m; sourceTree = "<group>"; };
+		D7E956E51AE6083400E08F65 /* TLYShyNavBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLYShyNavBarManager.h; path = TLYShyNavBar/TLYShyNavBarManager.h; sourceTree = "<group>"; };
+		D7E956E61AE6083400E08F65 /* TLYShyNavBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLYShyNavBarManager.m; path = TLYShyNavBar/TLYShyNavBarManager.m; sourceTree = "<group>"; };
+		D7E956E71AE6083400E08F65 /* TLYShyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLYShyViewController.h; path = TLYShyNavBar/TLYShyViewController.h; sourceTree = "<group>"; };
+		D7E956E81AE6083400E08F65 /* TLYShyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLYShyViewController.m; path = TLYShyNavBar/TLYShyViewController.m; sourceTree = "<group>"; };
+		D7E956EC1AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+TLYSwizzlingHelpers.h"; path = "TLYShyNavBar/Categories/NSObject+TLYSwizzlingHelpers.h"; sourceTree = "<group>"; };
+		D7E956ED1AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+TLYSwizzlingHelpers.m"; path = "TLYShyNavBar/Categories/NSObject+TLYSwizzlingHelpers.m"; sourceTree = "<group>"; };
+		D7E956EE1AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BetterLayoutGuides.h"; path = "TLYShyNavBar/Categories/UIViewController+BetterLayoutGuides.h"; sourceTree = "<group>"; };
+		D7E956EF1AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BetterLayoutGuides.m"; path = "TLYShyNavBar/Categories/UIViewController+BetterLayoutGuides.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +114,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E956D51AE5FD1A00E08F65 /* libsqlite3.dylib in Frameworks */,
+				D7E094631B0DD20F00456DCF /* libz.dylib in Frameworks */,
+				D7E094611B0DD1F000456DCF /* SystemConfiguration.framework in Frameworks */,
+				D7E0945F1B0DD1DE00456DCF /* StoreKit.framework in Frameworks */,
+				D7E0945D1B0DD1D400456DCF /* Security.framework in Frameworks */,
+				D7E0945B1B0DD1BC00456DCF /* QuartzCore.framework in Frameworks */,
+				D7E094591B0DD1AF00456DCF /* MobileCoreServices.framework in Frameworks */,
+				D7E094571B0DD19F00456DCF /* CoreLocation.framework in Frameworks */,
+				D7E094551B0DD19200456DCF /* CoreGraphics.framework in Frameworks */,
+				D7E094531B0DD18700456DCF /* CFNetwork.framework in Frameworks */,
+				D7E094511B0DD17C00456DCF /* AudioToolbox.framework in Frameworks */,
+				D7E0944B1B0DD0D200456DCF /* Parse.framework in Frameworks */,
+				D7E0944F1B0DD0D200456DCF /* ParseUI.framework in Frameworks */,
+				D7E0944E1B0DD0D200456DCF /* ParseFacebookUtilsV4.framework in Frameworks */,
+				D7E0944A1B0DD0D200456DCF /* Bolts.framework in Frameworks */,
+				D7E0944D1B0DD0D200456DCF /* ParseFacebookUtils.framework in Frameworks */,
+				D7E0944C1B0DD0D200456DCF /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +144,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7D8463F1B2C0C02007BC19F /* ProcessHUB */ = {
+			isa = PBXGroup;
+			children = (
+				D7D8463C1B2C0BF8007BC19F /* MBProgressHUD.h */,
+				D7D8463D1B2C0BF8007BC19F /* MBProgressHUD.m */,
+			);
+			name = ProcessHUB;
+			sourceTree = "<group>";
+		};
+		D7D846421B2C33DC007BC19F /* JTHamburgerButton */ = {
+			isa = PBXGroup;
+			children = (
+				D7D846431B2C33DC007BC19F /* JTHamburgerButton.h */,
+				D7D846441B2C33DC007BC19F /* JTHamburgerButton.m */,
+			);
+			path = JTHamburgerButton;
+			sourceTree = "<group>";
+		};
+		D7E094431B0DD0D200456DCF /* parse-library-1-2 */ = {
+			isa = PBXGroup;
+			children = (
+				D7E094441B0DD0D200456DCF /* Bolts.framework */,
+				D7E094451B0DD0D200456DCF /* Parse.framework */,
+				D7E094461B0DD0D200456DCF /* ParseCrashReporting.framework */,
+				D7E094471B0DD0D200456DCF /* ParseFacebookUtils.framework */,
+				D7E094481B0DD0D200456DCF /* ParseFacebookUtilsV4.framework */,
+				D7E094491B0DD0D200456DCF /* ParseUI.framework */,
+			);
+			path = "parse-library-1-2";
+			sourceTree = "<group>";
+		};
 		D7E9569F1AE5F4D900E08F65 = {
 			isa = PBXGroup;
 			children = (
+				D7E094621B0DD20F00456DCF /* libz.dylib */,
+				D7E094601B0DD1F000456DCF /* SystemConfiguration.framework */,
+				D7E0945E1B0DD1DE00456DCF /* StoreKit.framework */,
+				D7E0945C1B0DD1D400456DCF /* Security.framework */,
+				D7E0945A1B0DD1BC00456DCF /* QuartzCore.framework */,
+				D7E094581B0DD1AF00456DCF /* MobileCoreServices.framework */,
+				D7E094561B0DD19F00456DCF /* CoreLocation.framework */,
+				D7E094541B0DD19200456DCF /* CoreGraphics.framework */,
+				D7E094521B0DD18700456DCF /* CFNetwork.framework */,
+				D7E094501B0DD17C00456DCF /* AudioToolbox.framework */,
+				D7E956D41AE5FD1A00E08F65 /* libsqlite3.dylib */,
+				D7E956D61AE5FD8000E08F65 /* tarotvn-Bridging-Header.h */,
+				D717D9DB1B0C8D53000CF210 /* tarotviet.sqlite3 */,
 				D7E956AA1AE5F4D900E08F65 /* tarotvn */,
 				D7E956C01AE5F4D900E08F65 /* tarotvnTests */,
 				D7E956A91AE5F4D900E08F65 /* Products */,
@@ -81,14 +209,22 @@
 		D7E956AA1AE5F4D900E08F65 /* tarotvn */ = {
 			isa = PBXGroup;
 			children = (
-				D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */,
-				D7E956AF1AE5F4D900E08F65 /* ViewController.swift */,
+				D7D846421B2C33DC007BC19F /* JTHamburgerButton */,
+				D7D8463F1B2C0C02007BC19F /* ProcessHUB */,
+				D7E094431B0DD0D200456DCF /* parse-library-1-2 */,
+				D7E956E11AE6080F00E08F65 /* TLYShyNavBar */,
+				D7E956D31AE5FC6B00E08F65 /* controller */,
+				D7E956D21AE5FC6400E08F65 /* view */,
+				D7E956D11AE5FC5D00E08F65 /* model */,
+				D7E956AF1AE5F4D900E08F65 /* listCardViewController.swift */,
+				D73D469B1AE6508D00F5D909 /* TarotCard.swift */,
+				D73D46991AE6507100F5D909 /* DatabaseManager.swift */,
+				D717D9DC1B0C8FD5000CF210 /* DetailCardViewController.swift */,
 				D7E956B11AE5F4D900E08F65 /* Main.storyboard */,
-				D7E956B41AE5F4D900E08F65 /* Images.xcassets */,
-				D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */,
 				D7E956AB1AE5F4D900E08F65 /* Supporting Files */,
-				D7E956CD1AE5F58100E08F65 /* ListcardTableViewController.swift */,
-				D7E956CF1AE5F71300E08F65 /* ListCardTableViewCell.swift */,
+				D7E094641B0DD54C00456DCF /* BookListTableViewController.swift */,
+				D7D165A61B15CA2700653E4C /* ReadDataDocs.swift */,
+				D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */,
 			);
 			path = tarotvn;
 			sourceTree = "<group>";
@@ -96,6 +232,9 @@
 		D7E956AB1AE5F4D900E08F65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D7E956AD1AE5F4D900E08F65 /* AppDelegate.swift */,
+				D7E956B41AE5F4D900E08F65 /* Images.xcassets */,
+				D7E956B61AE5F4D900E08F65 /* LaunchScreen.xib */,
 				D7E956AC1AE5F4D900E08F65 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -116,6 +255,53 @@
 				D7E956C21AE5F4D900E08F65 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7E956D11AE5FC5D00E08F65 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D7E956D21AE5FC6400E08F65 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D7D846401B2C168C007BC19F /* HamburgerButton.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D7E956D31AE5FC6B00E08F65 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D7E956E11AE6080F00E08F65 /* TLYShyNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956E21AE6081C00E08F65 /* Categories */,
+				D7E956E31AE6083400E08F65 /* TLYDelegateProxy.h */,
+				D7E956E41AE6083400E08F65 /* TLYDelegateProxy.m */,
+				D7E956E51AE6083400E08F65 /* TLYShyNavBarManager.h */,
+				D7E956E61AE6083400E08F65 /* TLYShyNavBarManager.m */,
+				D7E956E71AE6083400E08F65 /* TLYShyViewController.h */,
+				D7E956E81AE6083400E08F65 /* TLYShyViewController.m */,
+			);
+			name = TLYShyNavBar;
+			sourceTree = "<group>";
+		};
+		D7E956E21AE6081C00E08F65 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D7E956EC1AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.h */,
+				D7E956ED1AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.m */,
+				D7E956EE1AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.h */,
+				D7E956EF1AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +404,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E956CE1AE5F58100E08F65 /* ListcardTableViewController.swift in Sources */,
-				D7E956B01AE5F4D900E08F65 /* ViewController.swift in Sources */,
+				D73D469A1AE6507100F5D909 /* DatabaseManager.swift in Sources */,
+				D717D9DD1B0C8FD5000CF210 /* DetailCardViewController.swift in Sources */,
+				D7E956F11AE6083E00E08F65 /* UIViewController+BetterLayoutGuides.m in Sources */,
+				D7E956B01AE5F4D900E08F65 /* listCardViewController.swift in Sources */,
+				D7E956EB1AE6083400E08F65 /* TLYShyViewController.m in Sources */,
+				D7D846451B2C33DC007BC19F /* JTHamburgerButton.m in Sources */,
 				D7E956AE1AE5F4D900E08F65 /* AppDelegate.swift in Sources */,
-				D7E956D01AE5F71300E08F65 /* ListCardTableViewCell.swift in Sources */,
+				D7E956EA1AE6083400E08F65 /* TLYShyNavBarManager.m in Sources */,
+				D7E956E91AE6083400E08F65 /* TLYDelegateProxy.m in Sources */,
+				D7D846411B2C168C007BC19F /* HamburgerButton.swift in Sources */,
+				D7D165A71B15CA2700653E4C /* ReadDataDocs.swift in Sources */,
+				D7E956F01AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
+				D7E094651B0DD54C00456DCF /* BookListTableViewController.swift in Sources */,
+				D73D469C1AE6508D00F5D909 /* TarotCard.swift in Sources */,
+				D7BC6B381B25A21100296444 /* DownloadedTableViewController.swift in Sources */,
+				D7D8463E1B2C0BF8007BC19F /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,9 +546,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tarotvn/parse-library-1-2",
+				);
 				INFOPLIST_FILE = tarotvn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tarotvn/tarotvn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -358,9 +563,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tarotvn/parse-library-1-2",
+				);
 				INFOPLIST_FILE = tarotvn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tarotvn/tarotvn-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -417,6 +628,7 @@
 				D7E956C91AE5F4D900E08F65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7E956CA1AE5F4D900E08F65 /* Build configuration list for PBXNativeTarget "tarotvnTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +637,7 @@
 				D7E956CC1AE5F4D900E08F65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
