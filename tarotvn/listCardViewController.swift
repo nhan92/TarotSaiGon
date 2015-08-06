@@ -13,67 +13,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var arrCard:[TarotCard]!
     var card:TarotCard!
     var searchActive : Bool = false
-
+    var database:DatabaseManager!;
     var filtered:[TarotCard] = []
-    
     var selectedCard:TarotCard!
+    ///
+    var arrDownloadedFile: [NSString] = []
+    var arrDownloadedFileDislay: [NSString] = []
+    var selectedFile:String!
+
     
-    //var hamButt: HamburgerButton!
+    
     
     @IBOutlet weak var searchBarContainerView: UIView!
-    
-    @IBOutlet weak var myListCard: UITableView!
+    @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var mySearch: UISearchBar!
-    
     @IBAction func hamButt(sender: AnyObject) {
+        
         if sender.currentMode == JTHamburgerButtonMode.Hamburger
         {
             sender.setCurrentModeWithAnimation(JTHamburgerButtonMode.Cross)
         }else{
             sender.setCurrentModeWithAnimation(JTHamburgerButtonMode.Hamburger)
         }
-        
-        
+     
     }
    
-    
     var nameFileDatabase:String!
+    var nameFileDatabaseIndexPaths:Int!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       // var  nameCard = card.nameCard
         arrCard = []
+        myTableView.dataSource = self
+        myTableView.delegate = self
        
-        // Init
-//        self.hamButt = HamburgerButton(frame: CGRectMake(267, 0, 130, 130))
-//        self.searchBarContainerView.addSubview(hamButt)
-        
-        myListCard.dataSource = self
-        myListCard.delegate = self
         mySearch.delegate = self
         
         self.searchBarContainerView.backgroundColor = UIColor.blueColor()
         
-        self.shyNavBarManager.scrollView = self.myListCard;
+       // self.shyNavBarManager.scrollView = self.myTableView;
         
-        var databaseManager:DatabaseManager = DatabaseManager();
+        database = DatabaseManager();
         
         // Connect
-        databaseManager .confirgureDatabaseWithName(nameFileDatabase)
+        database .confirgureDatabaseWithName(nameFileDatabase)
         
-        arrCard =  databaseManager.getAllOfTarotCaseInDatabase()
+        arrCard =  database.getAllOfTarotCaseInDatabase()
 
-        self.myListCard.reloadData()
+        self.myTableView.reloadData()
         
-        //self.hamButt.addTarget(self, action: "toggle:", forControlEvents:.)
-//        self.hamButt.addTarget(self, action: "toggle:", forControlEvents: UIControlEvents.TouchUpInside)
-   }
-//    
-//    func toggle(sender: AnyObject!)
-//    {
-//        self.hamButt.showsMenu = !self.hamButt.showsMenu
-//    }
+    }
+
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true;
@@ -93,18 +84,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func searchBar(mySearch: UISearchBar, textDidChange searchText: String) {
         
-//        filtered = arrCard.filter({ (text) -> Bool in
-//            let tmp: TarotCard = text
-//            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-//            return range.location != NSNotFound
-//        })
-//        
-//        if(filtered.count == 0){
-//            searchActive = false;
-//        } else {
-//            searchActive = true;
-//        }
-//        self.myListCard.reloadData()
+        if searchText.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0
+        {
+            searchActive = true;
+            
+            self.filtered = database.getAllCardWithName(searchText);
+            
+            myTableView.reloadData();
+        }
+        else
+        
+        {
+            searchActive = false;
+            
+            myTableView.reloadData();
+        }
     }
 
 
@@ -114,7 +108,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "selected")
+        
+        
+        if (segue.identifier == "SelectedRider")
         {
             // pass data to next view
             var detailScreen:DetailCardViewController = segue.destinationViewController as! DetailCardViewController;
@@ -122,7 +118,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             detailScreen.card = selectedCard;
             
         }
+        
+        if (segue.identifier == "SelectedTarot")
+        {
+            // pass data to next view
+            var detailScreen1:DetailCardTarotViewController = segue.destinationViewController as! DetailCardTarotViewController;
+            
+            detailScreen1.card = selectedCard;
+            
+        }
+        
+        
     }
+    
+  
     
     // MARK: - Table view data source
     
@@ -145,8 +154,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         selectedCard = arrCard[indexPath.row];
         
-        [self .performSegueWithIdentifier("selected", sender: nil)]
+        var  defaultName: String = arrDownloadedFileDislay[nameFileDatabaseIndexPaths] as String
         
+        if defaultName == "Rider Waite Tarot"
+        {
+            
+            [self .performSegueWithIdentifier("SelectedRider", sender: nil)]
+        
+        }
+        else {
+            
+            [self.performSegueWithIdentifier("SelectedTarot", sender: nil)]
+        }
     }
     
      func tableView(myListCard: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -165,6 +184,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        
+        if let arrFileNameDownloaded: AnyObject = userDefault.objectForKey("fileDownload")
+        {
+            var readArray: [NSString] = arrFileNameDownloaded as! [NSString]
+            
+            arrDownloadedFile = readArray
+        }
+        
+        if let arrFileNameDownloadedDislay: AnyObject = userDefault.objectForKey("fileDownloadDislay")
+        {
+            var readArrayDislay: [NSString] = arrFileNameDownloadedDislay as! [NSString]
+            
+            arrDownloadedFileDislay = readArrayDislay
+        }
+        
+        
+    }
+
         
 }
 

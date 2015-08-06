@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D5F4513E-DBB7-44F6-90D3-9856AEE469A1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>tarotvn</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D2019421C348F4D17497FBCD1BA4D9A2FEB8F398</key>
 		<string>https://github.com/nhan92/tarotvn.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>tarotvn.xcodeproj/project.xcworkspace</string>
+	<string>tarotvn.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D2019421C348F4D17497FBCD1BA4D9A2FEB8F398</key>

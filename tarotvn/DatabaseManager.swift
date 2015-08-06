@@ -11,17 +11,15 @@ import UIKit
 class DatabaseManager
 {
     var database:COpaquePointer!;
-
     func confirgureDatabaseWithName(fullDBName:String)
+    
     {
         if let temp = database
         {
             // Close
             sqlite3_close(database);
-            
             // Init
             database = NhanNguyen_Connect_DB_Sqlite(fullDBName)
-            
         }
         else
         {
@@ -33,8 +31,58 @@ class DatabaseManager
     func getAllOfTarotCaseInDatabase() -> [TarotCard]
     {
         var arrCard:[TarotCard] = []
-        
         var statement:COpaquePointer = NhanNguyen_Select("SELECT * FROM tarot_viet", database: database);
+        while sqlite3_step(statement) == SQLITE_ROW
+        {
+            let row = Int(sqlite3_column_int(statement, 0))
+            let rowData = sqlite3_column_text(statement, 1)
+            let nameCard = String.fromCString(UnsafePointer<CChar>(rowData))
+            
+            let rowData1 = sqlite3_column_text(statement, 3)
+            let keyWord = String.fromCString(UnsafePointer<CChar>(rowData1))
+            
+            let rowData2 = sqlite3_column_text(statement, 2)
+            let forwardCard = String.fromCString(UnsafePointer<CChar>(rowData2))
+            
+            let rowData3 = sqlite3_column_text(statement, 9)
+            let reverseCard = String.fromCString(UnsafePointer<CChar>(rowData3))
+            
+            let rowData4 = sqlite3_column_text(statement, 4)
+            let images = String.fromCString(UnsafePointer<CChar>(rowData4))
+            
+            let rowData5 = sqlite3_column_text(statement, 5)
+            let keyDetail = String.fromCString(UnsafePointer<CChar>(rowData5))
+            
+            let rowData6 = sqlite3_column_text(statement, 8)
+            let information = String.fromCString(UnsafePointer<CChar>(rowData6))
+            
+            let rowData7 = sqlite3_column_text(statement, 6)
+            let cardAntonyms = String.fromCString(UnsafePointer<CChar>(rowData7))
+            
+            let rowData8 = sqlite3_column_text(statement, 7)
+            let cardSynonyms = String.fromCString(UnsafePointer<CChar>(rowData8))
+            
+            let newcard:TarotCard = TarotCard(nameCard: nameCard!, keyWord: keyWord!, keyDetail: keyDetail!, images: images!, cardAntonyms: cardAntonyms!, cardSynonyms: cardSynonyms!, information: information!, forwardCard: forwardCard!, reverseCard: reverseCard!, idCard: row)
+            
+            arrCard.append(newcard);
+            
+        }
+        
+        sqlite3_finalize(statement)
+        return arrCard
+    }
+    
+    func getAllCardWithName(nameCard:String) -> [TarotCard]
+    {
+        var arrCard:[TarotCard] = []
+        
+        
+        var query:NSString = "SELECT * FROM tarot_viet WHERE englishName LIKE '%";
+        query = query.stringByAppendingFormat("%@", nameCard);
+        query = query.stringByAppendingFormat("%%");
+        query = query.stringByAppendingFormat("'");
+        
+        var statement:COpaquePointer = NhanNguyen_Select(query as String, database: database);
         
         
         while sqlite3_step(statement) == SQLITE_ROW
@@ -79,8 +127,7 @@ class DatabaseManager
         return arrCard
     }
     
-    
-    func NhanNguyen_Select(var query:String,  var database:COpaquePointer)->COpaquePointer{
+    func NhanNguyen_Select(var query:String,  var database:COpaquePointer)-> COpaquePointer{
         var statement:COpaquePointer = nil
         sqlite3_prepare_v2(database, query, -1, &statement, nil)
         return statement
@@ -98,9 +145,9 @@ class DatabaseManager
     }
     
     
-    func NhanNguyen_Connect_DB_Sqlite(var fullDBName:String)->COpaquePointer
+    func NhanNguyen_Connect_DB_Sqlite(var fullDBName:String)-> COpaquePointer
     {
-        var database:COpaquePointer = nil
+        var database: COpaquePointer = nil
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
         

@@ -13,61 +13,80 @@ class BookListTableViewController: UITableViewController {
     
     var arrlist: [AnyObject]!
     var selected: PFObject!
-        override func viewDidLoad() {
+    
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         arrlist = []
-          MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-            
-        var query = PFQuery(className: "DataBook")
-            
+            var query = PFQuery(className: "DataBook")
             let userDefault = NSUserDefaults.standardUserDefaults()
            
             if let arrFileNameDownloaded: AnyObject = userDefault.objectForKey("fileDownload")
             {
                 var readArray: [NSString] = arrFileNameDownloaded as! [NSString]
-                
                 query.whereKey("FullName", notContainedIn: readArray)
             }
+        ///add to dislay
+        if let arrFileNameDownloadedDislay: AnyObject = userDefault.objectForKey("fileDownloadDislay")
+        {
+            var readArrayDislay: [NSString] = arrFileNameDownloadedDislay as! [NSString]
+            query.whereKey("name", notContainedIn: readArrayDislay)
+        }
+        ////
         
-            
         query.findObjectsInBackgroundWithBlock {(objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 
-                
-//                let userDefault = NSUserDefaults.standardUserDefaults()
-//                var arrFile:[PFObject] = []
-//                
-//              //  NSArray *arr = (NSArray *) objects;
-//                
-//                
-//                var newArray = objects as AnyObject! as! Array<PFObject>
-//             
-//                for obj in newArray
-//                {
-//                    let nameFile :String = obj["FullName"] as! String
-//                    
-//                    let isDownloaded: AnyObject? = userDefault.objectForKey(nameFile)
-//                    
-//                    if isDownloaded == nil
-//                    {
-//                        arrFile.append(obj as PFObject)
-//                    }
-//                }
-                
                 self.arrlist = objects
             }
+            
             self.tableView.reloadData()
             
             MBProgressHUD.hideHUDForView(self.view, animated: true)
         }
+        
+       
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onCreatedNotification", name: "reloadListBooks" , object: nil)
+        
+    }
+    
+    func onCreatedNotification()
+    {
+        arrlist = []
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
+        var query = PFQuery(className: "DataBook")
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        
+        if let arrFileNameDownloaded: AnyObject = userDefault.objectForKey("fileDownload")
+        {
+            var readArray: [NSString] = arrFileNameDownloaded as! [NSString]
+            query.whereKey("FullName", notContainedIn: readArray)
+        }
+        
+        ///add to dislay
+        if let arrFileNameDownloadedDislay: AnyObject = userDefault.objectForKey("fileDownloadDislay")
+        {
+            var readArrayDislay: [NSString] = arrFileNameDownloadedDislay as! [NSString]
+            query.whereKey("name", notContainedIn: readArrayDislay)
+        }
+        ////
+        
+        query.findObjectsInBackgroundWithBlock {(objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                
+                self.arrlist = objects
+            }
             
+            self.tableView.reloadData()
+            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+        }
+        
+        //self.tableView.reloadData()
     }
    /////get data from Parse.com
     
@@ -110,109 +129,114 @@ class BookListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
       
-        selected = arrlist[indexPath.row] as! PFObject
-        let daBook: PFFile = selected["file"] as! PFFile
-        let daBookName: String = selected["FullName"] as! String
-        var checkValidation = NSFileManager.defaultManager()
-       
+        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+        //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
         
-    ///
-        var myHUb:MBProgressHUD =  MBProgressHUD.showHUDAddedTo(UIApplication.sharedApplication().keyWindow, animated: true)
-        myHUb.labelText = "Downloading";
-        myHUb.dimBackground = true;
         
-        ///
         
-        daBook.getDataInBackgroundWithBlock { (fileTarot: NSData?, error: NSError?) -> Void in
-            let dirPaths = NSSearchPathForDirectoriesInDomains( .DocumentDirectory, .UserDomainMask, true)
-            let docsDir = dirPaths[0] as! String
-            
-            let databasePath: String = String(format: "%@/%@", arguments: [docsDir, daBookName])
-            
-            NSLog("dataPath = %@", databasePath)
-            
-            fileTarot?.writeToFile(databasePath, atomically: true)
-            
-            
-            if (checkValidation.fileExistsAtPath(databasePath))
-            {
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            switch action.style{
+            case .Default:
+                println("default")
                 
-                self.arrlist.removeAtIndex(indexPath.row)
-                tableView.reloadData()
+                self.selected = self.arrlist[indexPath.row] as! PFObject
+                let daBook: PFFile = self.selected["file"] as! PFFile
+                let daBookName: String = self.selected["FullName"] as! String
+                let daBookNameDislay: String = self.selected["name"] as! String
+                var checkValidation = NSFileManager.defaultManager()
                 
-                let userDefault = NSUserDefaults.standardUserDefaults()
-                //userDefault.setObject(NSNumber(bool: true), forKey: daBookName)
                 
-                 if let arrFileNameDownloaded: AnyObject = userDefault.objectForKey("fileDownload")
-                 {
-                    var readArray:[NSString] = arrFileNameDownloaded as! [NSString]
+                ///
+                var myHUb:MBProgressHUD =  MBProgressHUD.showHUDAddedTo(UIApplication.sharedApplication().keyWindow, animated: true)
+                myHUb.labelText = "Downloading";
+                myHUb.dimBackground = true;
+                
+                ///
+                
+                daBook.getDataInBackgroundWithBlock { (fileTarot: NSData?, error: NSError?) -> Void in
+                    let dirPaths = NSSearchPathForDirectoriesInDomains( .DocumentDirectory, .UserDomainMask, true)
+                    let docsDir = dirPaths[0] as! String
+                    let databasePath: String = String(format: "%@/%@", arguments: [docsDir, daBookName])
                     
-                    readArray.append(daBookName)
+                    NSLog("dataPath = %@", databasePath)
                     
-                    userDefault.setObject(readArray, forKey: "fileDownload")
-                }
-                else
-                 {
-                    // NIl
-                    var readArray:[NSString]  = []
-                    readArray.append(daBookName)
+                    fileTarot?.writeToFile(databasePath, atomically: true)
                     
-                    userDefault.setObject(readArray, forKey: "fileDownload")
-                }
+                    
+                    if (checkValidation.fileExistsAtPath(databasePath))
+                    {
+                        
+                        self.arrlist.removeAtIndex(indexPath.row)
+                        tableView.reloadData()
+                        
+                        let userDefault = NSUserDefaults.standardUserDefaults()
+                        //userDefault.setObject(NSNumber(bool: true), forKey: daBookName)
+                        
+                        if let arrFileNameDownloaded: AnyObject = userDefault.objectForKey("fileDownload")
+                        {
+                            var readArray:[NSString] = arrFileNameDownloaded as! [NSString]
+                            
+                            readArray.append(daBookName)
+                            
+                            userDefault.setObject(readArray, forKey: "fileDownload")
+                        }
+                        else
+                        {
+                            // NIl
+                            var readArray:[NSString]  = []
+                            readArray.append(daBookName)
+                            
+                            userDefault.setObject(readArray, forKey: "fileDownload")
+                        }
+                        
+                        if let arrFileNameDownloadedDislay: AnyObject = userDefault.objectForKey("fileDownloadDislay")
+                        {
+                            var readArrayDislay:[NSString] = arrFileNameDownloadedDislay as! [NSString]
+                            
+                            readArrayDislay.append(daBookNameDislay)
+                            
+                            userDefault.setObject(readArrayDislay, forKey: "fileDownloadDislay")
+                        }
+                        else
+                        {
+                            // NIl
+                            var readArrayDislay:[NSString]  = []
+                            readArrayDislay.append(daBookNameDislay)
+                            
+                            userDefault.setObject(readArrayDislay, forKey: "fileDownloadDislay")
+                        }
 
+                        
+                    }else {
+                        println("file already exitence")
+                    }
+                    
+                    // Hide
+                    MBProgressHUD.hideHUDForView(UIApplication.sharedApplication().keyWindow, animated: true)
+                }
                 
-            }else {
-                println("file already exitence")
+            case .Cancel:
+                println("cancel")
+                
+            case .Destructive:
+                println("destructive")
             }
             
-            // Hide
-            MBProgressHUD.hideHUDForView(UIApplication.sharedApplication().keyWindow, animated: true)
-        }
+        }))
+        
+        let cancel = UIAlertAction(title: "cancel", style: .Cancel, handler: {
+            action in
+            
+            self.tableView.reloadData()
+            
+        })
+        
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+       
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

@@ -15,19 +15,18 @@ class DetailCardViewController: UIViewController {
     
     @IBOutlet weak var myDescription: UITextView!
     @IBOutlet weak var mySegment: UISegmentedControl!
-
     @IBAction func mySelection(sender: UISegmentedControl) {
         
         switch mySegment.selectedSegmentIndex
         {
         case 0:
-            myDescription.text = card.keyWord
+            myDescription.text = card.keyDetail
         case 1:
             myDescription.text = card.forwardCard
         case 2:
             myDescription.text = card.information
-        case 3:
-            myDescription.text = card.keyDetail
+        //case 3:
+        //  myDescription.text = card.keyDetail
         default:
             break; 
         }
@@ -35,7 +34,7 @@ class DetailCardViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       myDescription.text = card.keyDetail
         
     }
 

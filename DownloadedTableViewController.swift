@@ -11,7 +11,10 @@ import UIKit
 class DownloadedTableViewController: UITableViewController {
    
     var arrDownloadedFile: [NSString] = []
+    var arrDownloadedFileDislay: [NSString] = []
     var selectedFile:String!
+    var indexPathOfDownloadedList: Int!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +39,16 @@ class DownloadedTableViewController: UITableViewController {
             arrDownloadedFile = readArray
         }
         
+        if let arrFileNameDownloadedDislay: AnyObject = userDefault.objectForKey("fileDownloadDislay")
+        {
+            var readArrayDislay: [NSString] = arrFileNameDownloadedDislay as! [NSString]
+            
+            arrDownloadedFileDislay = readArrayDislay
+        }
+
         self.tableView .reloadData()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,17 +70,19 @@ class DownloadedTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = arrDownloadedFile[indexPath.row] as String
+        cell.textLabel?.text = arrDownloadedFileDislay[indexPath.row] as String
         
-
         return cell
     }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
         let name:String = arrDownloadedFile[indexPath.row] as String;
+        indexPathOfDownloadedList = indexPath.row;
         
         selectedFile = name;
         
@@ -81,42 +94,104 @@ class DownloadedTableViewController: UITableViewController {
         var destination:ViewController = segue.destinationViewController as! ViewController
         
         destination.nameFileDatabase = selectedFile
+        destination.nameFileDatabaseIndexPaths = indexPathOfDownloadedList
     }
     
-    /*
+    
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+    
+    
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            //self.tableView.reloadData()
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            if let arrFileNameDownloaded: AnyObject = userDefault.objectForKey("fileDownload"){
+                
+                var readArray: [NSString] = arrFileNameDownloaded as! [NSString]
+                readArray.removeAtIndex(indexPath.row)
+                userDefault.setObject(readArray, forKey: "fileDownload")
+            }
+            
+            if let arrFileNameDownloadedDislay: AnyObject = userDefault.objectForKey("fileDownloadDislay"){
+                
+                var readArrayDislay: [NSString] = arrFileNameDownloadedDislay as! [NSString]
+                readArrayDislay.removeAtIndex(indexPath.row)
+                userDefault.setObject(readArrayDislay, forKey: "fileDownloadDislay")
+            }
+            
+            
+            removeData(arrDownloadedFile[indexPath.row] as String)
+            removeData(arrDownloadedFileDislay[indexPath.row] as String)
+            
+            arrDownloadedFile .removeAtIndex(indexPath.row)
+            arrDownloadedFileDislay.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            ///add notification
+            
+            let newCreatedNotification = NSNotification(name: "reloadListBooks", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(newCreatedNotification)
+            ///
+
+                       
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
-    /*
+    
     // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+      
+        let movedObject = self.arrDownloadedFile[sourceIndexPath.row]
+        arrDownloadedFile.removeAtIndex(sourceIndexPath.row)
+        arrDownloadedFile.insert(movedObject, atIndex: destinationIndexPath.row)
+       // NSLog("%@", "\(sourceIndexPath.row) => \(destinationIndexPath.row) \(data)")
+        // To check for correctness enable: self.tableView.reloadData()
+        
 
     }
-    */
+    
+    func removeData(itemName: String){
+        
+        var fileManager: NSFileManager = NSFileManager.defaultManager()
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask = NSSearchPathDomainMask.UserDomainMask
+        if let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true){
+            
+            if paths.count > 0{
+                
+                if let dirPath = paths[0] as? String {
+                    var filePath = NSString(format:"%@/%@", dirPath, itemName) as String
+                    NSLog("%@",filePath)
+                    var error: NSErrorPointer = NSErrorPointer()
+                    fileManager.removeItemAtPath(filePath, error: error)
+                    if error != nil{
+                    println(error.debugDescription)
+                    }
+                    
+                    
+                }
+            }
+            
+        }
 
-    /*
+    }
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation

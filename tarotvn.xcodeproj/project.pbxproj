@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D717D9DD1B0C8FD5000CF210 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717D9DC1B0C8FD5000CF210 /* DetailCardViewController.swift */; };
+		D726551C1B72773E00720544 /* DetailCardTarotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726551B1B72773E00720544 /* DetailCardTarotViewController.swift */; };
 		D73D469A1AE6507100F5D909 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D46991AE6507100F5D909 /* DatabaseManager.swift */; };
 		D73D469C1AE6508D00F5D909 /* TarotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D469B1AE6508D00F5D909 /* TarotCard.swift */; };
 		D7BC6B381B25A21100296444 /* DownloadedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		D717D9DB1B0C8D53000CF210 /* tarotviet.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tarotviet.sqlite3; sourceTree = "<group>"; };
 		D717D9DC1B0C8FD5000CF210 /* DetailCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
+		D726551B1B72773E00720544 /* DetailCardTarotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailCardTarotViewController.swift; path = ../DetailCardTarotViewController.swift; sourceTree = "<group>"; };
 		D73D46991AE6507100F5D909 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D73D469B1AE6508D00F5D909 /* TarotCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarotCard.swift; sourceTree = "<group>"; };
 		D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadedTableViewController.swift; path = ../DownloadedTableViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F4AFA5FB69690F9423A4AC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD783E2BDEA06736FAFA64FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7D8463F1B2C0C02007BC19F /* ProcessHUB */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,8 @@
 				D7E956AA1AE5F4D900E08F65 /* tarotvn */,
 				D7E956C01AE5F4D900E08F65 /* tarotvnTests */,
 				D7E956A91AE5F4D900E08F65 /* Products */,
+				4F4AFA5FB69690F9423A4AC1 /* Pods */,
+				CD783E2BDEA06736FAFA64FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,15 +234,16 @@
 				D7E956D31AE5FC6B00E08F65 /* controller */,
 				D7E956D21AE5FC6400E08F65 /* view */,
 				D7E956D11AE5FC5D00E08F65 /* model */,
-				D7E956AF1AE5F4D900E08F65 /* listCardViewController.swift */,
 				D73D469B1AE6508D00F5D909 /* TarotCard.swift */,
 				D73D46991AE6507100F5D909 /* DatabaseManager.swift */,
+				D7E094641B0DD54C00456DCF /* BookListTableViewController.swift */,
+				D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */,
+				D7E956AF1AE5F4D900E08F65 /* listCardViewController.swift */,
 				D717D9DC1B0C8FD5000CF210 /* DetailCardViewController.swift */,
+				D726551B1B72773E00720544 /* DetailCardTarotViewController.swift */,
+				D7D165A61B15CA2700653E4C /* ReadDataDocs.swift */,
 				D7E956B11AE5F4D900E08F65 /* Main.storyboard */,
 				D7E956AB1AE5F4D900E08F65 /* Supporting Files */,
-				D7E094641B0DD54C00456DCF /* BookListTableViewController.swift */,
-				D7D165A61B15CA2700653E4C /* ReadDataDocs.swift */,
-				D7BC6B371B25A21100296444 /* DownloadedTableViewController.swift */,
 			);
 			path = tarotvn;
 			sourceTree = "<group>";
@@ -353,6 +372,7 @@
 				TargetAttributes = {
 					D7E956A71AE5F4D900E08F65 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = D54Y88Y9CY;
 					};
 					D7E956BC1AE5F4D900E08F65 = {
 						CreatedOnToolsVersion = 6.3;
@@ -414,6 +434,7 @@
 				D7E956EA1AE6083400E08F65 /* TLYShyNavBarManager.m in Sources */,
 				D7E956E91AE6083400E08F65 /* TLYDelegateProxy.m in Sources */,
 				D7D846411B2C168C007BC19F /* HamburgerButton.swift in Sources */,
+				D726551C1B72773E00720544 /* DetailCardTarotViewController.swift in Sources */,
 				D7D165A71B15CA2700653E4C /* ReadDataDocs.swift in Sources */,
 				D7E956F01AE6083E00E08F65 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
 				D7E094651B0DD54C00456DCF /* BookListTableViewController.swift in Sources */,
@@ -547,6 +568,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tarotvn/parse-library-1-2",
@@ -554,6 +577,7 @@
 				INFOPLIST_FILE = tarotvn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tarotvn/tarotvn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -564,6 +588,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tarotvn/parse-library-1-2",
@@ -571,6 +597,7 @@
 				INFOPLIST_FILE = tarotvn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tarotvn/tarotvn-Bridging-Header.h";
 			};
 			name = Release;
