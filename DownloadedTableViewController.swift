@@ -86,17 +86,33 @@ class DownloadedTableViewController: UITableViewController {
         
         selectedFile = name;
         
-        self.performSegueWithIdentifier("pushDetailCard", sender: nil);
+        if arrDownloadedFileDislay[indexPath.row] == "Runes"{
+            
+            self.performSegueWithIdentifier("pushDetailRunes", sender: nil)
+        
+        }else{
+            
+            self.performSegueWithIdentifier("pushDetailCard", sender: nil);
+        }
     }
 
     override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
+        if segue.identifier == "pushDetailCard"{
         var destination:ViewController = segue.destinationViewController as! ViewController
         
         destination.nameFileDatabase = selectedFile
         destination.nameFileDatabaseIndexPaths = indexPathOfDownloadedList
+        
+        }else{
+            
+            var destinationRunes:ListCardViewRunesViewController = segue.destinationViewController as! ListCardViewRunesViewController
+            
+            destinationRunes.nameFileDatabase = selectedFile
+            destinationRunes.nameFileDatabaseIndexPaths = indexPathOfDownloadedList
+
+        }
     }
-    
     
     
     // Override to support conditional editing of the table view.

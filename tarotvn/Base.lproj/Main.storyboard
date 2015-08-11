@@ -103,6 +103,88 @@
             </objects>
             <point key="canvasLocation" x="1333" y="278"/>
         </scene>
+        <!--List Card View Runes View Controller-->
+        <scene sceneID="OSo-Z2-6gT">
+            <objects>
+                <viewController id="14w-Vz-tde" customClass="ListCardViewRunesViewController" customModule="tarotvn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DpG-cq-iWY"/>
+                        <viewControllerLayoutGuide type="bottom" id="3xi-OX-ENV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Oh-5a-Dgl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4LG-Zh-FWY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y5a-Nd-rvd">
+                                <rect key="frame" x="0.0" y="108" width="320" height="411"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RunesCell" rowHeight="96" id="i4T-tx-5eY" customClass="RunesTableViewCell" customModule="tarotvn" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i4T-tx-5eY" id="CHF-Gb-bLX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jK6-IA-svg">
+                                                    <rect key="frame" x="8" y="8" width="86" height="86"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="86" id="RkF-uo-v1r"/>
+                                                        <constraint firstAttribute="width" constant="86" id="gOI-KL-4xv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-Rh-EE3">
+                                                    <rect key="frame" x="142" y="24" width="102" height="47"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Gza-Rh-EE3" secondAttribute="trailing" constant="76" id="Mqq-XQ-XvY"/>
+                                                <constraint firstItem="jK6-IA-svg" firstAttribute="leading" secondItem="CHF-Gb-bLX" secondAttribute="leading" constant="8" id="VkD-UP-BEQ"/>
+                                                <constraint firstItem="jK6-IA-svg" firstAttribute="top" secondItem="CHF-Gb-bLX" secondAttribute="top" constant="8" id="aoy-LX-8IM"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gza-Rh-EE3" secondAttribute="bottom" constant="24.5" id="d2m-kL-qx1"/>
+                                                <constraint firstItem="Gza-Rh-EE3" firstAttribute="leading" secondItem="jK6-IA-svg" secondAttribute="trailing" constant="48" id="e23-Vq-Ft1"/>
+                                                <constraint firstItem="Gza-Rh-EE3" firstAttribute="top" secondItem="CHF-Gb-bLX" secondAttribute="top" constant="24" id="ot7-od-FrN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myRunesImages" destination="jK6-IA-svg" id="iGM-Ee-Xii"/>
+                                            <outlet property="myRunesText" destination="Gza-Rh-EE3" id="FKy-yN-dJv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="14w-Vz-tde" id="xJU-rK-RHj"/>
+                                    <outlet property="delegate" destination="14w-Vz-tde" id="3hT-ap-MgL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y5a-Nd-rvd" secondAttribute="trailing" id="7YF-1O-FXG"/>
+                            <constraint firstItem="y5a-Nd-rvd" firstAttribute="leading" secondItem="4Oh-5a-Dgl" secondAttribute="leading" id="JVG-2R-DLh"/>
+                            <constraint firstItem="4LG-Zh-FWY" firstAttribute="top" secondItem="DpG-cq-iWY" secondAttribute="bottom" id="N57-Cz-VIY"/>
+                            <constraint firstItem="3xi-OX-ENV" firstAttribute="top" secondItem="y5a-Nd-rvd" secondAttribute="bottom" id="NF3-ac-nKP"/>
+                            <constraint firstItem="4LG-Zh-FWY" firstAttribute="leading" secondItem="4Oh-5a-Dgl" secondAttribute="leading" id="cCu-PB-7hF"/>
+                            <constraint firstAttribute="trailing" secondItem="4LG-Zh-FWY" secondAttribute="trailing" id="nJG-hY-cqO"/>
+                            <constraint firstItem="y5a-Nd-rvd" firstAttribute="top" secondItem="4LG-Zh-FWY" secondAttribute="bottom" id="zuu-YM-vh6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cw6-UK-boA"/>
+                    <connections>
+                        <outlet property="mySearch" destination="4LG-Zh-FWY" id="JS9-Rc-c4a"/>
+                        <outlet property="myTableView" destination="y5a-Nd-rvd" id="7ZM-yS-han"/>
+                        <segue destination="pwt-Ej-P7z" kind="push" identifier="SelectedRunes" id="oge-CF-Hby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHY-aD-qJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="1053"/>
+        </scene>
         <!--Detail Card Tarot View Controller-->
         <scene sceneID="3Op-DA-I2h">
             <objects>
@@ -116,12 +198,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="tKb-A0-ABx">
-                                <rect key="frame" x="21" y="92" width="283" height="395"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="395" id="305-Y3-hhi"/>
-                                    <constraint firstAttribute="width" constant="283" id="dRb-b9-sck"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -129,8 +207,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tKb-A0-ABx" firstAttribute="leading" secondItem="tnG-6A-cYD" secondAttribute="leading" constant="21" id="EEm-8M-icJ"/>
-                            <constraint firstItem="tKb-A0-ABx" firstAttribute="top" secondItem="MQw-cI-PR5" secondAttribute="bottom" constant="28" id="w0R-hW-7c2"/>
+                            <constraint firstItem="tKb-A0-ABx" firstAttribute="leading" secondItem="tnG-6A-cYD" secondAttribute="leading" id="H8f-dg-LYR"/>
+                            <constraint firstItem="bZI-ea-yqr" firstAttribute="top" secondItem="tKb-A0-ABx" secondAttribute="bottom" id="Y6l-5y-Ryd"/>
+                            <constraint firstItem="tKb-A0-ABx" firstAttribute="top" secondItem="MQw-cI-PR5" secondAttribute="bottom" id="YHh-6H-DmD"/>
+                            <constraint firstAttribute="trailing" secondItem="tKb-A0-ABx" secondAttribute="trailing" id="y4g-ct-w0f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bsH-X2-B73"/>
@@ -282,6 +362,7 @@
                     <navigationItem key="navigationItem" id="TB9-eW-c4h"/>
                     <connections>
                         <segue destination="Rlq-qw-GWg" kind="push" identifier="pushDetailCard" id="mkx-ay-UG9"/>
+                        <segue destination="14w-Vz-tde" kind="push" identifier="pushDetailRunes" id="EUb-0t-rpP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQI-UY-APE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,4 +413,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="oge-CF-Hby"/>
+    </inferredMetricsTieBreakers>
 </document>
